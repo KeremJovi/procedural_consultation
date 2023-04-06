@@ -38,10 +38,24 @@
 		],
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
+		"react/prefer-stateless-function": [
+			1,
+			{
+				"ignorePureComponents": true
+			}
+		],
 		"import/prefer-default-export": "off",
 		"no-use-before-define": "off",
 		"@typescript-eslint/no-use-before-define": [
 			"error"
+		],
+		"no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"args": "after-used",
+				"ignoreRestSiblings": false
+			}
 		],
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
@@ -50,7 +64,22 @@
 			{
 				"endOfLine": "auto"
 			}
-		]
+		],
+		"jsx-a11y/label-has-associated-control": [
+			2,
+			{
+				"labelComponents": [
+					"CustomInputLabel"
+				],
+				"labelAttributes": [
+					"label"
+				],
+				"controlComponents": [
+					"CustomInput"
+				],
+				"depth": 3,
+			}
+		],
 	},
 	"settings": {
 		"import/resolver": {
