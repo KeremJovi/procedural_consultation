@@ -10,11 +10,13 @@ const ButtonContainer = styled.button`
 	background: #131212;
 	border: none;
 	border-radius: 5px;
+	margin: 15px 0px 0vw 2vw;
 
-	@media (max-width: 700px) {
+	@media (max-width: 800px) {
 		position: relative;
 		margin-top: 30px;
-		margin: 10vw 0px 0vw 25vw;
+		margin: 5vw 0px 0vw 0px;
+		justify-content: center;
 	}
 `;
 class Button extends React.PureComponent {
