@@ -27,7 +27,7 @@ interface ProcessesProps {
 	court: string;
 	startDate: Date;
 	updateDate: Date;
-	description: string;
+	upDescription: string;
 	status: string;
 	creditor: {
 		name: string;
@@ -48,7 +48,7 @@ function Processes({
 	court,
 	startDate,
 	updateDate,
-	description,
+	upDescription,
 	status,
 	creditor,
 	appellant,
@@ -73,7 +73,7 @@ function Processes({
 					<Spacer />
 					<Records>
 						<DateProcess>{moment(updateDate).format('DD/MM/YYYY')}</DateProcess>
-						<DesciptionRecords>{description}</DesciptionRecords>
+						<DesciptionRecords>{upDescription}</DesciptionRecords>
 					</Records>
 					<Spacer />
 				</ProcessesMovements>

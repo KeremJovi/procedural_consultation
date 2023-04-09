@@ -10,7 +10,7 @@ function Details() {
 				court="TJSP"
 				startDate={date}
 				updateDate={date}
-				description="Suspensão do Prazo referente ao usuario foi alterado para data
+				upDescription="Suspensão do Prazo referente ao usuario foi alterado para data
 				devido a alteração da tabela de feriados"
 				status="Cumprimento de Setença - Honorários Advocatícios"
 				creditor={{
