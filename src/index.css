@@ -5,7 +5,9 @@
 }
 
 body {
+	display: flex;
   background-color: #ffff;
   color: white;
-  padding: 2rem;
+	margin: 0 auto;
+	justify-content: center
 }
