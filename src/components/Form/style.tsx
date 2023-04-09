@@ -2,61 +2,19 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
 	background-color: #9a94a5;
-	border-radius: 20px 20px 0px 0px;
 	padding: 16px;
 	position: relative;
-	width: 90vw;
-	margin: 10px auto;
+	width: 100vw;
+	margin: 0px auto;
 	height: 20rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
 
-	@media (max-width: 700px) {
+	@media (max-width: 800px) {
 		width: 90vw;
 		height: 25rem;
-	}
-`;
-export const FormBox = styled.div`
-	max-width: 80%;
-	margin-bottom: 0px;
-	position: relative;
-	top: 1rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	list-style: none;
-	column-gap: 4rem;
-	row-gap: 0.5rem;
-
-	@media (max-width: 700px) {
-		display: grid;
-		justify-items: center;
-	}
-`;
-export const FormSelect = styled.select`
-	border: none;
-	border-radius: 3px;
-	width: 120%;
-	height: 2rem;
-	font-size: 1rem;
-	color: #727070;
-
-	@media (max-width: 700px) {
-		width: 50vw;
-	}
-`;
-
-export const FormInput = styled.input`
-	border: none;
-	border-radius: 3px;
-	width: 118%;
-	height: 2rem;
-	font-size: 0.98rem;
-	color: #727070;
-
-	@media (max-width: 700px) {
-		width: 50vw;
 	}
 `;
 
@@ -82,7 +40,7 @@ export const FormParagraph = styled.p`
 	font-family: 'Noto Serif Khojki', serif;
 	align-items: center;
 
-	@media (max-width: 700px) {
+	@media (max-width: 800px) {
 		width: 60vw;
 		word-wrap: normal;
 		overflow-wrap: normal;
@@ -99,13 +57,20 @@ export const FormFont = styled.h1`
 	color: #23307c;
 	font-family: 'League Script', cursive;
 	font-weight: bold;
+
+	@media (min-width: 1200px) {
+		font-size: 200px;
+	}
 `;
 export const FormSearch = styled.div`
 	display: flex;
 	justify-content: center;
 
-	@media (max-width: 700px) {
+	@media (max-width: 800px) {
 		display: grid;
 		margin: 0px auto;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
 	}
 `;
