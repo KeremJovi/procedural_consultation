@@ -12,6 +12,10 @@ export const FormContainer = styled.div`
 	justify-content: center;
 	gap: 10px;
 
+	@media (min-width: 1200px) {
+		height: 25rem;
+	}
+
 	@media (max-width: 800px) {
 		width: 90vw;
 		height: 25rem;
@@ -53,13 +57,13 @@ export const FormFont = styled.h1`
 	margin-bottom: 0px;
 	display: flex;
 	justify-content: center;
-	font-size: 15vw;
+	font-size: 10vw;
 	color: #23307c;
-	font-family: 'League Script', cursive;
+	font-family: 'Noto Serif Khojki', serif;
 	font-weight: bold;
 
 	@media (min-width: 1200px) {
-		font-size: 200px;
+		font-size: 140px;
 	}
 `;
 export const FormSearch = styled.div`
