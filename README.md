@@ -7,12 +7,12 @@
 1. Clone o repositório:
 
 ```bash
-$ git clone https://github.com/KeremJovi/procedural_consultation.git
-
+ git clone https://github.com/KeremJovi/procedural_consultation.git
+```
 2. Instale as dependências:
 
 ```bash
-$ yarn install
+ yarn install
 ```
 
 <h2 align="center">Variáveis de ambiente</h2>
