@@ -20,6 +20,21 @@
 		"sourceType": "module"
 	},
 	"rules": {
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": [
+					"function-declaration",
+					"function-expression",
+					"arrow-function",
+				],
+				"unnamedComponents": [
+					"function-expression",
+					"arrow-function",
+				]
+			}
+		],
+		"no-underscore-dangle": "off",
 		"react/jsx-filename-extension": [
 			1,
 			{
