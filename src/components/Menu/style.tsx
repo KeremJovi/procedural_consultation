@@ -34,7 +34,7 @@ export const ProcessesSearchBox = styled.div`
 `;
 
 export const SearchDiv = styled.div`
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 
 	@media (max-width: 800px) {
 		position: relative;

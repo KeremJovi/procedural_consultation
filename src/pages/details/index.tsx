@@ -1,37 +1,47 @@
-import React from 'react';
-import Processes from '../../components/Processes';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import Processes, { SingleResult } from '../../components/Processes';
+import { getProcessDetails } from '../../services/req/processes_db';
+import { Result } from '../../contexts/typesConfig';
 
 function Details() {
-	const date = new Date();
+	const { id } = useParams();
+	const [process, setProcess] = useState<SingleResult>({
+		_id: '',
+		numProcess: '',
+		court: '',
+		description: '',
+		startDate: '',
+		movements: [],
+		statusProcess: [],
+		creditor: { name: '', link: '' },
+		appellant: { name: '', link: '' },
+		attorney: [],
+	});
+	const [loading, setLoading] = useState(false);
+
+	const fetchDetailsProcess = async (processId: string) => {
+		try {
+			setLoading(true);
+			const { data } = await getProcessDetails(processId);
+			console.log(data);
+			setProcess(data);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			alert('Ops, não foi possível carregar as informações');
+		}
+	};
+
+	useEffect(() => {
+		if (id !== undefined) {
+			fetchDetailsProcess(id);
+		}
+	}, [id]);
+
 	return (
 		<div>
-			<Processes
-				numProcess="55555555555555555555"
-				court="TJSP"
-				startDate={date}
-				updateDate={date}
-				upDescription="Suspensão do Prazo referente ao usuario foi alterado para data
-				devido a alteração da tabela de feriados"
-				status="Cumprimento de Setença - Honorários Advocatícios"
-				creditor={{
-					name: 'Nelson Willians & Advogados Associados',
-					link: 'https://www.google.com/',
-				}}
-				appellant={{
-					name: 'Nelson Willians & Advogados Associados',
-					link: 'https://www.google.com/',
-				}}
-				attorney={[
-					{
-						name: 'Rafael Sfanzerla Durante',
-						link: 'https://www.google.com/',
-					},
-					{
-						name: 'Wilton Luis de Carvalho',
-						link: 'https://www.google.com/',
-					},
-				]}
-			/>
+			<Processes processObj={process} />
 		</div>
 	);
 }

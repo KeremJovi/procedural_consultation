@@ -1,16 +1,25 @@
 import React from 'react';
 import Card from '../../components/Card';
 import Menu from '../../components/Menu';
+import { useSearchContext } from '../../contexts/SearchContext';
 
 function Search() {
+	const { searchResults } = useSearchContext();
+
+	const cards = searchResults.map((obj) => (
+		<Card
+			key={obj.numProcess}
+			id={obj._id || ''}
+			numProcess={obj.numProcess}
+			court={obj.court}
+			description={obj.description}
+		/>
+	));
+
 	return (
 		<div>
 			<Menu />
-			<Card
-				numProcess="555555555555555555555"
-				court="TJSP"
-				description="Um processo de advocacia começa com a identificação do problema ou questão jurídica a ser resolvida. O advogado realiza uma análise minuciosa dos fatos e evidências disponíveis para determinar as opções legais disponíveis."
-			/>
+			{cards}
 		</div>
 	);
 }

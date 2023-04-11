@@ -1,12 +1,6 @@
 import React from 'react';
-import Button from '../Button';
 import Search from '../Search';
-import {
-	ProcessesSearch,
-	ProcessesSearchBox,
-	SearchButton,
-	SearchDiv,
-} from './style';
+import { ProcessesSearch, ProcessesSearchBox, SearchDiv } from './style';
 
 function Menu() {
 	return (
@@ -15,9 +9,6 @@ function Menu() {
 				<SearchDiv>
 					<Search />
 				</SearchDiv>
-				<SearchButton>
-					<Button />
-				</SearchButton>
 			</ProcessesSearchBox>
 		</ProcessesSearch>
 	);

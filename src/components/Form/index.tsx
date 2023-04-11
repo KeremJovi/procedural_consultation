@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Button from '../Button';
+import React from 'react';
 import {
 	FormContainer,
 	FormContainerChild,
@@ -24,9 +23,6 @@ function Form() {
 				</FormTitle>
 				<FormSearch>
 					<Search />
-					<div>
-						<Button />
-					</div>
 				</FormSearch>
 			</FormContainerChild>
 		</FormContainer>

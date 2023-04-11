@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+import { Link as RouterLink } from 'react-router-dom';
+
+export const Link = styled(RouterLink)`
+	text-decoration: none;
+`;
+
 export const CardContainer = styled.div`
 	background-color: #ced0d6;
 	border-radius: 8px;
@@ -16,6 +22,7 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardDescription = styled.p`
+	margin-top: 15px;
 	font-size: 1.3rem;
 	color: #474952;
 `;

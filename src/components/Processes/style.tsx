@@ -26,6 +26,7 @@ export const TitleCuston = styled.h1`
 `;
 
 export const DateProcess = styled.p`
+	margin-top: 10px;
 	color: #9e9d9d;
 	font-size: 15px;
 
@@ -74,13 +75,16 @@ export const DesciptionRecords = styled.p`
 	margin-top: 10px;
 	color: #1d183d;
 	font-size: 20px;
+	padding: 0px 20px 10px 0px;
+	text-align: justify;
 `;
 
 export const DetailsSideBar = styled.div`
 	display: grid;
 	justify-content: center;
-	width: 35vw;
-	row-gap: 1rem;
+	margin-left: 40px;
+	width: 25vw;
+	row-gap: 5px;
 
 	@media (max-width: 800px) {
 		width: 100vw;
@@ -93,9 +97,11 @@ export const DetailsDiv = styled.div`
 `;
 
 export const Details = styled.div`
-	margin-bottom: 1rem;
+	height: 50px;
+	margin-bottom: 30px;
 	@media (max-width: 800px) {
 		width: 88vw;
+		height: 350px;
 	}
 `;
 export const TitleSideBar = styled.p`
@@ -109,11 +115,11 @@ export const DetailsStatus = styled.p`
 	font-size: 15px;
 	margin-top: 15px;
 	font-family: 'Roboto', sans-serif;
+	text-align: justify;
 `;
 
 export const InvolvedSideBar = styled.div`
 	display: grid;
-	row-gap: 1.3rem;
 	padding-bottom: 20px;
 `;
 
@@ -126,4 +132,8 @@ export const Involved = styled.p`
 	font-size: 15px;
 	margin-top: 8px;
 	font-family: 'Roboto', sans-serif;
+`;
+
+export const InvolvedDiv = styled.div`
+	height: 40px;
 `;

@@ -1,28 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useCallback } from 'react';
+import { ButtonContainer } from './style';
 
-const ButtonContainer = styled.button`
-	width: 5rem;
-	height: 2rem;
-	font-size: 1rem;
-	color: #ffffff;
-	margin: 1rem 4rem;
-	background: #131212;
-	border: none;
-	border-radius: 5px;
-	margin: 15px 0px 0vw 2vw;
-
-	@media (max-width: 800px) {
-		position: relative;
-		margin-top: 30px;
-		margin: 5vw 0px 0vw 0px;
-		justify-content: center;
-	}
-`;
-class Button extends React.PureComponent {
-	render() {
-		return <ButtonContainer type="button">Busca</ButtonContainer>;
-	}
+export function Button({ handleSubmit }: any) {
+	const onClick = useCallback(() => {
+		handleSubmit();
+	}, [handleSubmit]);
+	return (
+		<ButtonContainer type="button" onClick={onClick}>
+			Buscar
+		</ButtonContainer>
+	);
 }
-
-export default Button;

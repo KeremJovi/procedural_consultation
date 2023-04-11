@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FormBox = styled.div`
-	margin-bottom: 0px;
+	margin-bottom: 30px;
 	position: relative;
 	top: 1rem;
 	display: flex;
